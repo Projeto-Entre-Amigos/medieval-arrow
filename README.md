@@ -9,10 +9,8 @@ Feito com Godot
 ## Passos para execução
 
 Com o godot previamente instalado, baixe o repositório.
-HTTPS
-`https://github.com/Projeto-Entre-Amigos/medieval-arrow.git`
-SSH
-`git@github.com:Projeto-Entre-Amigos/medieval-arrow.git`
+- HTTPS: `https://github.com/Projeto-Entre-Amigos/medieval-arrow.git`
+- SSH: `git@github.com:Projeto-Entre-Amigos/medieval-arrow.git`
 
 Abra como projeto no Godot.
 

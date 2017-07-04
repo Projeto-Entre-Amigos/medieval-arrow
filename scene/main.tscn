@@ -71,6 +71,8 @@ damp_override/angular = -1.0
 transform/pos = Vector2( -0.13852, 3.19813 )
 transform/scale = Vector2( 2.46977, 0.559075 )
 texture = ExtResource( 2 )
+region = true
+region_rect = Rect2( 0, 0, 32, 32 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ground"]
 

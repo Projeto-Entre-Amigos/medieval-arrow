@@ -8,7 +8,7 @@ func _ready():
 	set_process_input(true)
 
 func _input(ev):
-	if (ev.type == InputEvent.SCREEN_TOUCH):
+	if (ev.type == InputEvent.MOUSE_BUTTON):
 		if (ev.pressed):
 			start_pos = ev.pos
 		# Verifica a distância clique/toque em relação pressionamento

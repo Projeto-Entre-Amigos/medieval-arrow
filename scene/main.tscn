@@ -38,12 +38,12 @@ stretch_mode = 2
 
 [node name="player" parent="." instance=ExtResource( 1 )]
 
-transform/pos = Vector2( 505.172, 517.463 )
+transform/pos = Vector2( 499.62, 487.853 )
 
 [node name="ground" type="RigidBody2D" parent="."]
 
-transform/pos = Vector2( 515.881, 579.099 )
-transform/scale = Vector2( 13.2016, 1.75264 )
+transform/pos = Vector2( 515.881, 542.041 )
+transform/scale = Vector2( 13.2016, 2.94981 )
 input/pickable = false
 shapes/0/shape = SubResource( 1 )
 shapes/0/transform = Matrix32( 3.9731, 0, 0, 0.683258, -0.0573845, 3.10239 )
@@ -68,7 +68,7 @@ damp_override/angular = -1.0
 
 [node name="terraGRAMADO" type="Sprite" parent="ground"]
 
-transform/pos = Vector2( -0.13852, 3.19813 )
+transform/pos = Vector2( 0, 5.51266 )
 transform/scale = Vector2( 2.46977, 0.559075 )
 texture = ExtResource( 2 )
 region = true

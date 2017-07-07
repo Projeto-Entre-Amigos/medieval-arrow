@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=1]
 
-[ext_resource path="res://art/tanned2archer.png" type="Texture" id=1]
+[ext_resource path="res://art/archer.png" type="Texture" id=1]
 
 [sub_resource type="GDScript" id=1]
 
@@ -61,10 +61,7 @@ damp_override/angular = -1.0
 [node name="Sprite" type="Sprite" parent="."]
 
 texture = ExtResource( 1 )
-vframes = 4
-hframes = 13
-frame = 40
-region_rect = Rect2( 23, 51, 32, 11 )
+region_rect = Rect2( 0, 0, 32, 32 )
 script/script = SubResource( 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite"]

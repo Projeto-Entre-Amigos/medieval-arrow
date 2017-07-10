@@ -38,7 +38,7 @@ stretch_mode = 2
 
 [node name="player" parent="." instance=ExtResource( 1 )]
 
-transform/pos = Vector2( 505.172, 517.463 )
+transform/pos = Vector2( 505.172, 392.463 )
 
 [node name="ground" type="RigidBody2D" parent="."]
 

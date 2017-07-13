@@ -1,11 +1,9 @@
-[gd_scene load_steps=12 format=1]
+[gd_scene load_steps=10 format=1]
 
 [ext_resource path="res://src/player.gd" type="Script" id=1]
-[ext_resource path="res://art/char/tronco_000.png" type="Texture" id=2]
-[ext_resource path="res://art/char/run.png" type="Texture" id=3]
-[ext_resource path="res://art/char/jump.png" type="Texture" id=4]
-[ext_resource path="res://art/char/mao_esquerda.png" type="Texture" id=5]
-[ext_resource path="res://art/char/mao_direita.png" type="Texture" id=6]
+[ext_resource path="res://art/player/corpo.png" type="Texture" id=2]
+[ext_resource path="res://art/player/mao_direita.png" type="Texture" id=3]
+[ext_resource path="res://art/player/mao_esquerda.png" type="Texture" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -19,24 +17,24 @@ length = 1.0
 loop = true
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath("mao_direita:frame")
+tracks/0/path = NodePath("mao_esquerda:frame")
 tracks/0/interp = 1
 tracks/0/imported = false
 tracks/0/keys = {
-"times": FloatArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9 ),
-"transitions": FloatArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 1,
-"values": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
+"times": FloatArray( 0, 1 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ 0, 9 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("mao_esquerda:frame")
+tracks/1/path = NodePath("mao_direita:frame")
 tracks/1/interp = 1
 tracks/1/imported = false
 tracks/1/keys = {
-"times": FloatArray( 0, 0.4, 0.6, 0.8, 0.9 ),
-"transitions": FloatArray( 1, 1, 1, 1, 1 ),
+"times": FloatArray( 0, 0.6, 0.8 ),
+"transitions": FloatArray( 1, 1, 1 ),
 "update": 1,
-"values": [ 0, 1, 2, 1, 0 ]
+"values": [ 0, 1, 2 ]
 }
 
 [sub_resource type="Animation" id=3]
@@ -51,14 +49,14 @@ length = 1.0
 loop = true
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath("lower_jump:frame")
+tracks/0/path = NodePath("corpo:frame")
 tracks/0/interp = 1
 tracks/0/imported = false
 tracks/0/keys = {
 "times": FloatArray( 0, 1 ),
 "transitions": FloatArray( 1, 1 ),
 "update": 0,
-"values": [ 0, 9 ]
+"values": [ 10, 19 ]
 }
 
 [sub_resource type="Animation" id=5]
@@ -67,7 +65,7 @@ length = 1.0
 loop = true
 step = 1.0
 tracks/0/type = "value"
-tracks/0/path = NodePath("lower:frame")
+tracks/0/path = NodePath("corpo:frame")
 tracks/0/interp = 1
 tracks/0/imported = false
 tracks/0/keys = {
@@ -125,43 +123,26 @@ playback/speed = 1.0
 blend_times = [  ]
 autoplay = "idle"
 
-[node name="torso" type="Sprite" parent="."]
+[node name="corpo" type="Sprite" parent="."]
 
-transform/pos = Vector2( -18.6868, -145.672 )
-z/z = 1
 texture = ExtResource( 2 )
-
-[node name="lower" type="Sprite" parent="."]
-
-visibility/visible = false
-transform/pos = Vector2( -3.5855, 35.0604 )
-texture = ExtResource( 3 )
+vframes = 2
 hframes = 10
-frame = 2
-
-[node name="lower_jump" type="Sprite" parent="."]
-
-transform/pos = Vector2( -2.11111, 2.78148 )
-texture = ExtResource( 4 )
-hframes = 10
+frame = 10
 
 [node name="mao_direita" type="Sprite" parent="."]
 
-transform/pos = Vector2( -53.9081, -123.276 )
-z/z = 2
-z/relative = false
-texture = ExtResource( 5 )
-offset = Vector2( 25, 25 )
-hframes = 10
-frame = 8
+transform/pos = Vector2( 12.605, 5.30737 )
+texture = ExtResource( 3 )
+offset = Vector2( 18, 10 )
+hframes = 3
 
 [node name="mao_esquerda" type="Sprite" parent="."]
 
-transform/pos = Vector2( 37.7134, -103.905 )
-z/z = 1
-texture = ExtResource( 6 )
-offset = Vector2( 25, 15 )
-hframes = 3
+transform/pos = Vector2( -24.5466, 5.30736 )
+texture = ExtResource( 4 )
+offset = Vector2( 15, 12 )
+hframes = 10
 frame = 1
 
 

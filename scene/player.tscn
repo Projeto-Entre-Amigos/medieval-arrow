@@ -2,10 +2,10 @@
 
 [ext_resource path="res://src/player.gd" type="Script" id=1]
 [ext_resource path="res://art/char/tronco_000.png" type="Texture" id=2]
-[ext_resource path="res://art/run.png" type="Texture" id=3]
-[ext_resource path="res://art/jump.png" type="Texture" id=4]
+[ext_resource path="res://art/char/run.png" type="Texture" id=3]
+[ext_resource path="res://art/char/jump.png" type="Texture" id=4]
 [ext_resource path="res://art/char/mao_esquerda.png" type="Texture" id=5]
-[ext_resource path="res://art/mao_direita.png" type="Texture" id=6]
+[ext_resource path="res://art/char/mao_direita.png" type="Texture" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -22,12 +22,22 @@ tracks/0/type = "value"
 tracks/0/path = NodePath("mao_direita:frame")
 tracks/0/interp = 1
 tracks/0/imported = false
-tracks/0/keys = { "times":FloatArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9 ), "transitions":FloatArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ), "update":1, "values":[ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ] }
+tracks/0/keys = {
+"times": FloatArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9 ),
+"transitions": FloatArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
+}
 tracks/1/type = "value"
 tracks/1/path = NodePath("mao_esquerda:frame")
 tracks/1/interp = 1
 tracks/1/imported = false
-tracks/1/keys = { "times":FloatArray( 0, 0.4, 0.6, 0.8, 0.9 ), "transitions":FloatArray( 1, 1, 1, 1, 1 ), "update":1, "values":[ 0, 1, 2, 1, 0 ] }
+tracks/1/keys = {
+"times": FloatArray( 0, 0.4, 0.6, 0.8, 0.9 ),
+"transitions": FloatArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 1, 0 ]
+}
 
 [sub_resource type="Animation" id=3]
 
@@ -44,7 +54,12 @@ tracks/0/type = "value"
 tracks/0/path = NodePath("lower_jump:frame")
 tracks/0/interp = 1
 tracks/0/imported = false
-tracks/0/keys = { "times":FloatArray( 0, 1 ), "transitions":FloatArray( 1, 1 ), "update":0, "values":[ 0, 9 ] }
+tracks/0/keys = {
+"times": FloatArray( 0, 1 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ 0, 9 ]
+}
 
 [sub_resource type="Animation" id=5]
 
@@ -55,7 +70,12 @@ tracks/0/type = "value"
 tracks/0/path = NodePath("lower:frame")
 tracks/0/interp = 1
 tracks/0/imported = false
-tracks/0/keys = { "times":FloatArray( 0, 1 ), "transitions":FloatArray( 1, 1 ), "update":0, "values":[ 0, 9 ] }
+tracks/0/keys = {
+"times": FloatArray( 0, 1 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ 0, 9 ]
+}
 
 [node name="player" type="RigidBody2D"]
 
@@ -133,6 +153,7 @@ z/relative = false
 texture = ExtResource( 5 )
 offset = Vector2( 25, 25 )
 hframes = 10
+frame = 8
 
 [node name="mao_esquerda" type="Sprite" parent="."]
 
@@ -141,5 +162,6 @@ z/z = 1
 texture = ExtResource( 6 )
 offset = Vector2( 25, 15 )
 hframes = 3
+frame = 1
 
 

@@ -5,9 +5,6 @@
 [ext_resource path="res://art/cenario/terraGRAMADO.png" type="Texture" id=3]
 [ext_resource path="res://scene/player.tscn" type="PackedScene" id=4]
 
-
-
-
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0

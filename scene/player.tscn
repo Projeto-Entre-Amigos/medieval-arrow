@@ -58,6 +58,26 @@ tracks/0/keys = {
 "update": 0,
 "values": [ 10, 19 ]
 }
+tracks/1/type = "value"
+tracks/1/path = NodePath("mao_esquerda:transform/pos")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 0, 0.23962, 0.395949, 0.46031, 0.564774, 0.626343, 0.670741, 0.707061, 0.71423, 0.804318, 0.847161, 0.891239, 0.927383, 0.996565 ),
+"transitions": FloatArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( -24.5466, 5.30736 ), Vector2( -17.2489, 3.31709 ), Vector2( -16.5855, 7.96104 ), Vector2( -18.0401, 15.1729 ), Vector2( -19.367, 8.53869 ), Vector2( -22.0207, 7.21185 ), Vector2( -24.6744, -0.0857897 ), Vector2( -23.3475, 1.90448 ), Vector2( -23.0916, 0.57992 ), Vector2( -26.4087, -27.2838 ), Vector2( -24.4319, -29.7287 ), Vector2( -27.0855, -9.16262 ), Vector2( -25.7587, -11.1529 ), Vector2( -24.544, -11.4022 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("mao_direita:transform/pos")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = {
+"times": FloatArray( 0, 0.274454, 0.311983, 0.388629, 0.491324, 0.620934, 0.694001, 0.798461, 0.996309 ),
+"transitions": FloatArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 12.605, 5.30737 ), Vector2( 18.4162, 7.21783 ), Vector2( 13.9319, 5.97079 ), Vector2( 15.7743, 11.8677 ), Vector2( 15.2419, 16.0731 ), Vector2( 12.5798, 9.34947 ), Vector2( 10.5944, -2.70783 ), Vector2( 7.30026, -30.489 ), Vector2( 7.86391, -11.2703 ) ]
+}
 
 [sub_resource type="Animation" id=5]
 
@@ -79,7 +99,7 @@ tracks/0/keys = {
 
 input/pickable = false
 shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 10.2399, 0, 0, 16.9135, 8.96314, 0.0889506 )
+shapes/0/transform = Matrix32( 5.20674, 0, 0, 8.8046, -3.15685, 13.3559 )
 shapes/0/trigger = false
 collision/layers = 1
 collision/mask = 1
@@ -100,15 +120,6 @@ damp_override/linear = -1.0
 damp_override/angular = -1.0
 script/script = ExtResource( 1 )
 
-[node name="collider" type="CollisionShape2D" parent="."]
-
-visibility/visible = false
-transform/pos = Vector2( 8.96314, 0.0889506 )
-transform/scale = Vector2( 10.2399, 16.9135 )
-shape = SubResource( 1 )
-trigger = false
-_update_shape_index = 0
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 
 playback/process_mode = 1
@@ -118,21 +129,30 @@ anims/atirar = SubResource( 2 )
 anims/idle = SubResource( 3 )
 anims/jumping = SubResource( 4 )
 anims/walking = SubResource( 5 )
+next/jumping = "walking"
 playback/active = true
 playback/speed = 1.0
 blend_times = [  ]
 autoplay = "idle"
+
+[node name="collider" type="CollisionShape2D" parent="."]
+
+transform/pos = Vector2( -3.15685, 13.3559 )
+transform/scale = Vector2( 5.20674, 8.8046 )
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
 
 [node name="corpo" type="Sprite" parent="."]
 
 texture = ExtResource( 2 )
 vframes = 2
 hframes = 10
-frame = 10
+frame = 2
 
 [node name="mao_direita" type="Sprite" parent="."]
 
-transform/pos = Vector2( 12.605, 5.30737 )
+transform/pos = Vector2( 14.2591, 5.85116 )
 texture = ExtResource( 3 )
 offset = Vector2( 18, 10 )
 hframes = 3
@@ -143,6 +163,6 @@ transform/pos = Vector2( -24.5466, 5.30736 )
 texture = ExtResource( 4 )
 offset = Vector2( 15, 12 )
 hframes = 10
-frame = 1
+frame = 3
 
 

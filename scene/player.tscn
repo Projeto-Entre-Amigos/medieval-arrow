@@ -2,7 +2,7 @@
 
 [ext_resource path="res://src/player.gd" type="Script" id=1]
 [ext_resource path="res://art/player/corpo.png" type="Texture" id=2]
-[ext_resource path="res://art/player/mao_direita.png" type="Texture" id=3]
+[ext_resource path="res://art/player/arco_teste.png" type="Texture" id=3]
 [ext_resource path="res://art/player/mao_esquerda.png" type="Texture" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -20,22 +20,12 @@ tracks/0/type = "value"
 tracks/0/path = NodePath("mao_esquerda:frame")
 tracks/0/interp = 1
 tracks/0/imported = false
-tracks/0/keys = {
-"times": FloatArray( 0, 1 ),
-"transitions": FloatArray( 1, 1 ),
-"update": 0,
-"values": [ 0, 9 ]
-}
+tracks/0/keys = { "times":FloatArray( 0, 1 ), "transitions":FloatArray( 1, 1 ), "update":0, "values":[ 0, 9 ] }
 tracks/1/type = "value"
 tracks/1/path = NodePath("mao_direita:frame")
 tracks/1/interp = 1
 tracks/1/imported = false
-tracks/1/keys = {
-"times": FloatArray( 0, 0.6, 0.8 ),
-"transitions": FloatArray( 1, 1, 1 ),
-"update": 1,
-"values": [ 0, 1, 2 ]
-}
+tracks/1/keys = { "times":FloatArray( 0, 0.6, 0.8 ), "transitions":FloatArray( 1, 1, 1 ), "update":1, "values":[ 0, 1, 2 ] }
 
 [sub_resource type="Animation" id=3]
 
@@ -52,48 +42,28 @@ tracks/0/type = "value"
 tracks/0/path = NodePath("corpo:frame")
 tracks/0/interp = 1
 tracks/0/imported = false
-tracks/0/keys = {
-"times": FloatArray( 0, 1 ),
-"transitions": FloatArray( 1, 1 ),
-"update": 0,
-"values": [ 10, 19 ]
-}
+tracks/0/keys = { "times":FloatArray( 0, 1 ), "transitions":FloatArray( 1, 1 ), "update":0, "values":[ 10, 19 ] }
 tracks/1/type = "value"
-tracks/1/path = NodePath("mao_esquerda:transform/pos")
+tracks/1/path = NodePath("mao_direita:transform/pos")
 tracks/1/interp = 1
 tracks/1/imported = false
-tracks/1/keys = {
-"times": FloatArray( 0, 0.23962, 0.395949, 0.46031, 0.564774, 0.626343, 0.670741, 0.707061, 0.71423, 0.804318, 0.847161, 0.891239, 0.927383, 0.996565 ),
-"transitions": FloatArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 1,
-"values": [ Vector2( -24.5466, 5.30736 ), Vector2( -17.2489, 3.31709 ), Vector2( -16.5855, 7.96104 ), Vector2( -18.0401, 15.1729 ), Vector2( -19.367, 8.53869 ), Vector2( -22.0207, 7.21185 ), Vector2( -24.6744, -0.0857897 ), Vector2( -23.3475, 1.90448 ), Vector2( -23.0916, 0.57992 ), Vector2( -26.4087, -27.2838 ), Vector2( -24.4319, -29.7287 ), Vector2( -27.0855, -9.16262 ), Vector2( -25.7587, -11.1529 ), Vector2( -24.544, -11.4022 ) ]
-}
+tracks/1/keys = { "times":FloatArray( 0, 0.1, 0.2, 0.274454, 0.3, 0.311983, 0.388629, 0.4, 0.491324, 0.5, 0.620934, 0.694001, 0.7, 0.798461, 0.8, 0.9, 0.996309 ), "transitions":FloatArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ), "update":0, "values":[ Vector2( 8.44336, 6.21286 ), Vector2( 9.22705, 6.76463 ), Vector2( 9.70454, 8.22188 ), Vector2( 18.4162, 7.21783 ), Vector2( 13.5675, 7.56645 ), Vector2( 13.9319, 5.97079 ), Vector2( 15.7743, 11.8677 ), Vector2( 14.5179, 14.7283 ), Vector2( 15.2419, 16.0731 ), Vector2( 12.6688, 21.0117 ), Vector2( 12.5798, 9.34947 ), Vector2( 10.5944, -2.70783 ), Vector2( 9.20774, -0.112097 ), Vector2( 7.30026, -30.489 ), Vector2( 7.66314, -25.6792 ), Vector2( 6.68995, -7.58471 ), Vector2( 7.86391, -11.2703 ) ] }
 tracks/2/type = "value"
-tracks/2/path = NodePath("mao_direita:transform/pos")
+tracks/2/path = NodePath("mao_esquerda:transform/pos")
 tracks/2/interp = 1
 tracks/2/imported = false
-tracks/2/keys = {
-"times": FloatArray( 0, 0.274454, 0.311983, 0.388629, 0.491324, 0.620934, 0.694001, 0.798461, 0.996309 ),
-"transitions": FloatArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 12.605, 5.30737 ), Vector2( 18.4162, 7.21783 ), Vector2( 13.9319, 5.97079 ), Vector2( 15.7743, 11.8677 ), Vector2( 15.2419, 16.0731 ), Vector2( 12.5798, 9.34947 ), Vector2( 10.5944, -2.70783 ), Vector2( 7.30026, -30.489 ), Vector2( 7.86391, -11.2703 ) ]
-}
+tracks/2/keys = { "times":FloatArray( 0, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9 ), "transitions":FloatArray( 1, 1, 1, 1, 1, 1, 1, 1 ), "update":0, "values":[ Vector2( -24.1723, -1.16117 ), Vector2( -16.972, -3.20818 ), Vector2( -17.0252, 1.961 ), Vector2( -19.1918, 8.26809 ), Vector2( -19.2125, 1.01781 ), Vector2( -25.3292, -6.84207 ), Vector2( -28.845, -35.1843 ), Vector2( -22.1196, -18.6604 ) ] }
 
 [sub_resource type="Animation" id=5]
 
 length = 1.0
-loop = true
-step = 1.0
+loop = false
+step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("corpo:frame")
 tracks/0/interp = 1
 tracks/0/imported = false
-tracks/0/keys = {
-"times": FloatArray( 0, 1 ),
-"transitions": FloatArray( 1, 1 ),
-"update": 0,
-"values": [ 0, 9 ]
-}
+tracks/0/keys = { "times":FloatArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1 ), "transitions":FloatArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ), "update":0, "values":[ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ] }
 
 [node name="player" type="RigidBody2D"]
 
@@ -148,21 +118,23 @@ _update_shape_index = 0
 texture = ExtResource( 2 )
 vframes = 2
 hframes = 10
-frame = 2
+frame = 10
 
 [node name="mao_direita" type="Sprite" parent="."]
 
-transform/pos = Vector2( 14.2591, 5.85116 )
+transform/pos = Vector2( 8.44336, 6.21286 )
+transform/rot = 5.25168
 texture = ExtResource( 3 )
-offset = Vector2( 18, 10 )
+offset = Vector2( 18, 5 )
 hframes = 3
 
 [node name="mao_esquerda" type="Sprite" parent="."]
 
-transform/pos = Vector2( -24.5466, 5.30736 )
+transform/pos = Vector2( -24.1723, -1.16117 )
+transform/rot = -0.176855
 texture = ExtResource( 4 )
 offset = Vector2( 15, 12 )
 hframes = 10
-frame = 3
+frame = 1
 
 

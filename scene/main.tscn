@@ -94,6 +94,6 @@ region_rect = Rect2( 0, 0, 32, 32 )
 
 [node name="player" parent="." instance=ExtResource( 4 )]
 
-transform/pos = Vector2( 505.172, 392.463 )
+transform/pos = Vector2( 84.8381, 433.36 )
 
 

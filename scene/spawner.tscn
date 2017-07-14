@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=1]
+
+[ext_resource path="res://src/spawner.gd" type="Script" id=1]
+
+[node name="spawner" type="Node2D"]
+
+script/script = ExtResource( 1 )
+spawn = null
+min_intervalo = 0
+max_intervalo = 10
+min_quantidade_inimigos = 0
+max_quantidade_inimigos = 10
+
+[node name="timer" type="Timer" parent="."]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = true
+
+

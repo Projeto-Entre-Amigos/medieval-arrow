@@ -5,10 +5,9 @@
 [node name="spawner" type="Node2D"]
 
 script/script = ExtResource( 1 )
+spawn = null
 min_intervalo = 0
 max_intervalo = 10
-min_quantidade_inimigos = 0
-max_quantidade_inimigos = 10
 
 [node name="timer" type="Timer" parent="."]
 
@@ -16,5 +15,7 @@ process_mode = 1
 wait_time = 1.0
 one_shot = false
 autostart = true
+
+[connection signal="timeout" from="timer" to="." method="_on_timer_timeout"]
 
 

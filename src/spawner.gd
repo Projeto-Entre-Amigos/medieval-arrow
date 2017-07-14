@@ -6,8 +6,8 @@ extends Node2D
 
 export(float) var min_intervalo = 0
 export(float) var max_intervalo = 10
-export(int) var min_quantidade_inimigos = 0
-export(int) var max_quantidade_inimigos = 10
+export(int) var min_quantidade = 0
+export(int) var max_quantidade = 10
 
 var spawn = preload ("../scene/player.tscn")
 onready var timer = get_child(0)

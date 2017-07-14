@@ -41,7 +41,6 @@ stretch_mode = 2
 
 [node name="ground" type="RigidBody2D" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( 515.881, 579.099 )
 transform/scale = Vector2( 13.2016, 1.75264 )
 input/pickable = false
@@ -101,5 +100,7 @@ transform/pos = Vector2( 84.8381, 433.36 )
 [node name="spawner" parent="." instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 760.609, 247.984 )
+min_quantidade = 0
+max_quantidade = 10
 
 

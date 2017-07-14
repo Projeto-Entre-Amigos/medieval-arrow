@@ -14,7 +14,9 @@ func _ready():
 	print ("Iniciando spawner")
 
 func _spawn():
-	add_child(spawnref.instance ())
+	var spawned = spawnref.instance ()
+	spawned.set_global_pos (get_global_pos())
+	get_parent().add_child(spawned)
 	timer.set_wait_time(rand_range(min_intervalo, max_intervalo))
 
 func _on_timer_timeout():

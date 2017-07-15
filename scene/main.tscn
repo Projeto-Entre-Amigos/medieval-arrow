@@ -48,7 +48,7 @@ input/pickable = false
 shapes/0/shape = SubResource( 1 )
 shapes/0/transform = Matrix32( 5.15176, 0, 0, 0.434337, 15.2652, -10.7334 )
 shapes/0/trigger = false
-collision/layers = 1
+collision/layers = 0
 collision/mask = 1
 mode = 3
 mass = 1.0
@@ -97,6 +97,8 @@ region_rect = Rect2( 0, 0, 32, 32 )
 [node name="player" parent="." instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 84.8381, 433.36 )
+collision/layers = 3
+collision/mask = 0
 
 [node name="spawner" parent="." instance=ExtResource( 5 )]
 

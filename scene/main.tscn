@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=1]
+[gd_scene load_steps=8 format=1]
 
 [ext_resource path="res://art/cenario/bakground.png" type="Texture" id=1]
 [ext_resource path="res://art/cenario/foreground.png" type="Texture" id=2]
 [ext_resource path="res://art/cenario/terraGRAMADO.png" type="Texture" id=3]
 [ext_resource path="res://scene/player.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scene/spawner.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scene/enemy1.tscn" type="PackedScene" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -47,7 +48,7 @@ input/pickable = false
 shapes/0/shape = SubResource( 1 )
 shapes/0/transform = Matrix32( 5.15176, 0, 0, 0.434337, 15.2652, -10.7334 )
 shapes/0/trigger = false
-collision/layers = 2
+collision/layers = 0
 collision/mask = 1
 mode = 3
 mass = 1.0
@@ -96,11 +97,12 @@ region_rect = Rect2( 0, 0, 32, 32 )
 [node name="player" parent="." instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 84.8381, 433.36 )
-collision/mask = 2
+collision/layers = 3
+collision/mask = 0
 
 [node name="spawner" parent="." instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 1234.37, 310.905 )
-spawn = ExtResource( 4 )
+spawn = ExtResource( 6 )
 
 

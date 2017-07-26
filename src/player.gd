@@ -27,6 +27,7 @@ func shoot (impulse):
 	var bi = bullet.instance()
 	bi.set_pos(Vector2(50, -10))
 	bi.set_rot(impulse.angle())
+	bi.set_rotd(270)
 	bi.apply_impulse(Vector2(0, 0), -impulse)
 	add_child(bi)
 

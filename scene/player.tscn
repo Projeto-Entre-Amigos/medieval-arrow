@@ -20,14 +20,24 @@ tracks/0/type = "value"
 tracks/0/path = NodePath("mao_esquerda:frame")
 tracks/0/interp = 1
 tracks/0/imported = false
-tracks/0/keys = { "times":FloatArray( 0, 1 ), "transitions":FloatArray( 1, 1 ), "update":0, "values":[ 0, 9 ] }
+tracks/0/keys = {
+"times": FloatArray( 0, 1 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ 0, 9 ]
+}
 tracks/1/type = "value"
 tracks/1/path = NodePath("mao_direita:frame")
 tracks/1/interp = 1
 tracks/1/imported = false
-tracks/1/keys = { "times":FloatArray( 0, 0.6, 0.8 ), "transitions":FloatArray( 1, 1, 1 ), "update":1, "values":[ 0, 1, 2 ] }
+tracks/1/keys = {
+"times": FloatArray( 0, 0.6, 0.8 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2 ]
+}
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=3]
 
 resource/name = "falling"
 length = 0.3
@@ -37,7 +47,12 @@ tracks/0/type = "value"
 tracks/0/path = NodePath("corpo:frame")
 tracks/0/interp = 1
 tracks/0/imported = false
-tracks/0/keys = { "times":FloatArray( 0, 0.1, 0.2 ), "transitions":FloatArray( 1, 1, 1 ), "update":1, "values":[ 17, 18, 19 ] }
+tracks/0/keys = {
+"times": FloatArray( 0, 0.1, 0.2 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 17, 18, 19 ]
+}
 
 [sub_resource type="Animation" id=4]
 
@@ -48,17 +63,32 @@ tracks/0/type = "value"
 tracks/0/path = NodePath("corpo:frame")
 tracks/0/interp = 1
 tracks/0/imported = false
-tracks/0/keys = { "times":FloatArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6 ), "transitions":FloatArray( 1, 1, 1, 1, 1, 1, 1 ), "update":0, "values":[ 13, 14, 15, 16, 17, 18, 19 ] }
+tracks/0/keys = {
+"times": FloatArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6 ),
+"transitions": FloatArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 13, 14, 15, 16, 17, 18, 19 ]
+}
 tracks/1/type = "value"
 tracks/1/path = NodePath("mao_direita:transform/pos")
 tracks/1/interp = 1
 tracks/1/imported = false
-tracks/1/keys = { "times":FloatArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ), "transitions":FloatArray( 1, 1, 1, 1, 1, 1 ), "update":0, "values":[ Vector2( 13.8584, 9.82286 ), Vector2( 13.0848, 14.7221 ), Vector2( 14.1162, 17.8164 ), Vector2( 6.66414, 13.6907 ), Vector2( 8.0843, 9.87056 ), Vector2( 8.20399, 6.70062 ) ] }
+tracks/1/keys = {
+"times": FloatArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": FloatArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 13.8584, 9.82286 ), Vector2( 13.0848, 14.7221 ), Vector2( 14.1162, 17.8164 ), Vector2( 6.66414, 13.6907 ), Vector2( 8.0843, 9.87056 ), Vector2( 8.20399, 6.70062 ) ]
+}
 tracks/2/type = "value"
 tracks/2/path = NodePath("mao_esquerda:transform/pos")
 tracks/2/interp = 1
 tracks/2/imported = false
-tracks/2/keys = { "times":FloatArray( 0, 0.1, 0.2, 0.3, 0.5 ), "transitions":FloatArray( 1, 1, 1, 1, 1 ), "update":0, "values":[ Vector2( -15.2102, -0.0857129 ), Vector2( -17.2074, 2.98702 ), Vector2( -17.6513, 7.67294 ), Vector2( -23.2573, 5.54764 ), Vector2( -24.0733, -4.97648 ) ] }
+tracks/2/keys = {
+"times": FloatArray( 0, 0.1, 0.2, 0.3, 0.5 ),
+"transitions": FloatArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -15.2102, -0.0857129 ), Vector2( -17.2074, 2.98702 ), Vector2( -17.6513, 7.67294 ), Vector2( -23.2573, 5.54764 ), Vector2( -24.0733, -4.97648 ) ]
+}
 
 [sub_resource type="Animation" id=5]
 
@@ -69,17 +99,32 @@ tracks/0/type = "value"
 tracks/0/path = NodePath("corpo:frame")
 tracks/0/interp = 1
 tracks/0/imported = false
-tracks/0/keys = { "times":FloatArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1 ), "transitions":FloatArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ), "update":0, "values":[ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ] }
+tracks/0/keys = {
+"times": FloatArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1 ),
+"transitions": FloatArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ]
+}
 tracks/1/type = "value"
 tracks/1/path = NodePath("mao_esquerda:transform/pos")
 tracks/1/interp = 1
 tracks/1/imported = false
-tracks/1/keys = { "times":FloatArray( 0, 0.2, 0.5, 0.7, 1 ), "transitions":FloatArray( 1, 1, 1, 1, 1 ), "update":0, "values":[ Vector2( -25.8674, -3.9044 ), Vector2( -26.8674, -6.9044 ), Vector2( -26.8674, -0.904405 ), Vector2( -26.8674, -2.9044 ), Vector2( -27.8674, -0.904403 ) ] }
+tracks/1/keys = {
+"times": FloatArray( 0, 0.2, 0.5, 0.7, 1 ),
+"transitions": FloatArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -25.8674, -3.9044 ), Vector2( -26.8674, -6.9044 ), Vector2( -26.8674, -0.904405 ), Vector2( -26.8674, -2.9044 ), Vector2( -27.8674, -0.904403 ) ]
+}
 tracks/2/type = "value"
 tracks/2/path = NodePath("mao_direita:transform/pos")
 tracks/2/interp = 1
 tracks/2/imported = false
-tracks/2/keys = { "times":FloatArray( 0, 0.2, 0.5, 0.7 ), "transitions":FloatArray( 1, 1, 1, 1 ), "update":0, "values":[ Vector2( 8.44336, 6.21286 ), Vector2( 8.59407, 4.59169 ), Vector2( 8.59407, 8.59169 ), Vector2( 8.59407, 5.59169 ) ] }
+tracks/2/keys = {
+"times": FloatArray( 0, 0.2, 0.5, 0.7 ),
+"transitions": FloatArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 8.44336, 6.21286 ), Vector2( 8.59407, 4.59169 ), Vector2( 8.59407, 8.59169 ), Vector2( 8.59407, 5.59169 ) ]
+}
 
 [node name="player" type="RigidBody2D"]
 
@@ -112,7 +157,7 @@ playback/process_mode = 1
 playback/default_blend_time = 0.0
 root/root = NodePath("..")
 anims/atirar = SubResource( 2 )
-anims/falling = SubResource( 6 )
+anims/falling = SubResource( 3 )
 anims/jumping = SubResource( 4 )
 anims/walking = SubResource( 5 )
 next/jumping = "walking"
@@ -134,11 +179,11 @@ _update_shape_index = 0
 texture = ExtResource( 2 )
 vframes = 2
 hframes = 10
-frame = 18
+frame = 9
 
 [node name="mao_direita" type="Sprite" parent="."]
 
-transform/pos = Vector2( 13.8584, 9.82286 )
+transform/pos = Vector2( 8.48417, 6.04467 )
 transform/rot = 5.25168
 texture = ExtResource( 3 )
 offset = Vector2( 18, 5 )
@@ -146,11 +191,11 @@ hframes = 3
 
 [node name="mao_esquerda" type="Sprite" parent="."]
 
-transform/pos = Vector2( -15.2102, -0.0857129 )
+transform/pos = Vector2( -27.5966, -1.44594 )
 transform/rot = -0.176855
 texture = ExtResource( 4 )
 offset = Vector2( 15, 12 )
 hframes = 10
-frame = 1
+frame = 4
 
 

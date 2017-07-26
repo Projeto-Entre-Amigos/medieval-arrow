@@ -19,7 +19,7 @@ func _input(ev):
 			var delta_pos = ev.pos - start_pos
 			shoot (delta_pos)
 
-func jump (height = 100):
+func jump (height = 400):
 	if (!is_jumping()):
 		set_linear_velocity(Vector2(0,-height))
 

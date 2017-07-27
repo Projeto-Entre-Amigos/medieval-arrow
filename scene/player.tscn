@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=1]
+[gd_scene load_steps=11 format=1]
 
 [ext_resource path="res://src/player.gd" type="Script" id=1]
 [ext_resource path="res://art/player/corpo.png" type="Texture" id=2]
@@ -9,33 +9,6 @@
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10.6842 )
-
-[sub_resource type="Animation" id=2]
-
-resource/name = "atirar"
-length = 1.0
-loop = true
-step = 0.1
-tracks/0/type = "value"
-tracks/0/path = NodePath("mao_esquerda:frame")
-tracks/0/interp = 1
-tracks/0/imported = false
-tracks/0/keys = {
-"times": FloatArray( 0, 1 ),
-"transitions": FloatArray( 1, 1 ),
-"update": 0,
-"values": [ 0, 9 ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("mao_direita:frame")
-tracks/1/interp = 1
-tracks/1/imported = false
-tracks/1/keys = {
-"times": FloatArray( 0, 0.6, 0.8 ),
-"transitions": FloatArray( 1, 1, 1 ),
-"update": 1,
-"values": [ 0, 1, 2 ]
-}
 
 [sub_resource type="Animation" id=3]
 
@@ -88,6 +61,60 @@ tracks/2/keys = {
 "transitions": FloatArray( 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( -15.2102, -0.0857129 ), Vector2( -17.2074, 2.98702 ), Vector2( -17.6513, 7.67294 ), Vector2( -23.2573, 5.54764 ), Vector2( -24.0733, -4.97648 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+
+resource/name = "puxar"
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("mao_esquerda:frame")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9 ),
+"transitions": FloatArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("mao_direita:frame")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 0, 0.6, 0.8 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2 ]
+}
+
+[sub_resource type="Animation" id=6]
+
+resource/name = "soltar"
+length = 0.08
+loop = false
+step = 0.04
+tracks/0/type = "value"
+tracks/0/path = NodePath("mao_direita:frame")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0, 0.04, 0.08 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 2, 2, 0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("mao_esquerda:frame")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 0, 0.04 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 1,
+"values": [ 9, 8 ]
 }
 
 [sub_resource type="Animation" id=5]
@@ -156,14 +183,16 @@ script/script = ExtResource( 1 )
 playback/process_mode = 1
 playback/default_blend_time = 0.0
 root/root = NodePath("..")
-anims/atirar = SubResource( 2 )
 anims/falling = SubResource( 3 )
 anims/jumping = SubResource( 4 )
+anims/puxar = SubResource( 2 )
+anims/soltar = SubResource( 6 )
 anims/walking = SubResource( 5 )
 next/jumping = "walking"
+next/puxar = "walking"
 playback/active = true
 playback/speed = 1.4
-blend_times = [  ]
+blend_times = [ "puxar", "puxar", 50.0 ]
 autoplay = "walking"
 
 [node name="collider" type="CollisionShape2D" parent="."]
@@ -183,19 +212,20 @@ frame = 9
 
 [node name="mao_direita" type="Sprite" parent="."]
 
-transform/pos = Vector2( 8.48417, 6.04467 )
+transform/pos = Vector2( 8.44336, 6.21286 )
 transform/rot = 5.25168
 texture = ExtResource( 3 )
 offset = Vector2( 18, 5 )
 hframes = 3
+frame = 2
 
 [node name="mao_esquerda" type="Sprite" parent="."]
 
-transform/pos = Vector2( -27.5966, -1.44594 )
+transform/pos = Vector2( -25.8674, -3.9044 )
 transform/rot = -0.176855
 texture = ExtResource( 4 )
 offset = Vector2( 15, 12 )
 hframes = 10
-frame = 4
+frame = 9
 
 

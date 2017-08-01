@@ -81,7 +81,7 @@ input/pickable = false
 shapes/0/shape = SubResource( 1 )
 shapes/0/transform = Matrix32( 5.15176, 0, 0, 0.434337, 15.2652, 6.26661 )
 shapes/0/trigger = false
-collision/layers = 0
+collision/layers = 8
 collision/mask = 1
 mode = 3
 mass = 1.0
@@ -155,5 +155,6 @@ gravity_scale = 9.8
 
 transform/pos = Vector2( 1234.37, 310.905 )
 spawn = ExtResource( 6 )
+min_intervalo = 3
 
 

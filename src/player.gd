@@ -3,7 +3,7 @@ extends RigidBody2D
 # Preload: Carrega o recurso em tempo de compilação
 var bullet = preload("../scene/bullet.tscn")
 var start_pos;
-
+var velocity = Vector2()
 func _ready():
 	set_process_input(true)
 
@@ -19,11 +19,12 @@ func _input(ev):
 		else:
 			var delta_pos = ev.pos - start_pos
 			shoot (delta_pos)
+			get_node("anim").play("soltar")
 
 func jump (height = 400):
 	if (!is_jumping()):
 		set_linear_velocity(Vector2(0,-height))
-		get_node("anim").play("jumping")
+		get_node("anim").play("jumping") 
 
 func shoot (impulse):
 	var bi = bullet.instance()

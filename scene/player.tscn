@@ -10,7 +10,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10.6842 )
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=2]
 
 resource/name = "falling"
 length = 0.3
@@ -29,7 +29,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id=4]
 
-length = 0.6
+length = 0.4
 loop = false
 step = 0.1
 tracks/0/type = "value"
@@ -37,35 +37,34 @@ tracks/0/path = NodePath("corpo:frame")
 tracks/0/interp = 1
 tracks/0/imported = false
 tracks/0/keys = {
-"times": FloatArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6 ),
-"transitions": FloatArray( 1, 1, 1, 1, 1, 1, 1 ),
+"times": FloatArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"transitions": FloatArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ 13, 14, 15, 16, 17, 18, 19 ]
+"values": [ 13, 14, 15, 16, 17 ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("mao_direita:transform/pos")
 tracks/1/interp = 1
 tracks/1/imported = false
 tracks/1/keys = {
-"times": FloatArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
-"transitions": FloatArray( 1, 1, 1, 1, 1, 1 ),
+"times": FloatArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"transitions": FloatArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 13.8584, 9.82286 ), Vector2( 13.0848, 14.7221 ), Vector2( 14.1162, 17.8164 ), Vector2( 6.66414, 13.6907 ), Vector2( 8.0843, 9.87056 ), Vector2( 8.20399, 6.70062 ) ]
+"values": [ Vector2( 13.8584, 9.82286 ), Vector2( 13.0848, 14.7221 ), Vector2( 14.1162, 17.8164 ), Vector2( 6.66414, 13.6907 ), Vector2( 8, 8 ) ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("mao_esquerda:transform/pos")
 tracks/2/interp = 1
 tracks/2/imported = false
 tracks/2/keys = {
-"times": FloatArray( 0, 0.1, 0.2, 0.3, 0.5 ),
+"times": FloatArray( 0, 0.1, 0.2, 0.3, 0.4 ),
 "transitions": FloatArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( -15.2102, -0.0857129 ), Vector2( -17.2074, 2.98702 ), Vector2( -17.6513, 7.67294 ), Vector2( -23.2573, 5.54764 ), Vector2( -24.0733, -4.97648 ) ]
+"values": [ Vector2( -15.2102, -0.0857129 ), Vector2( -17.2074, 2.98702 ), Vector2( -17.6513, 7.67294 ), Vector2( -23.2573, 5.54764 ), Vector2( -24, -3 ) ]
 }
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id=5]
 
-resource/name = "puxar"
 length = 1.0
 loop = false
 step = 0.1
@@ -88,6 +87,18 @@ tracks/1/keys = {
 "transitions": FloatArray( 1, 1, 1 ),
 "update": 1,
 "values": [ 0, 1, 2 ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath("anim")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = {
+"times": FloatArray( 1 ),
+"transitions": FloatArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "\"soltar\""
+} ]
 }
 
 [sub_resource type="Animation" id=6]
@@ -117,7 +128,7 @@ tracks/1/keys = {
 "values": [ 9, 8 ]
 }
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=7]
 
 length = 1.0
 loop = true
@@ -183,16 +194,16 @@ script/script = ExtResource( 1 )
 playback/process_mode = 1
 playback/default_blend_time = 0.0
 root/root = NodePath("..")
-anims/falling = SubResource( 3 )
+anims/falling = SubResource( 2 )
 anims/jumping = SubResource( 4 )
-anims/puxar = SubResource( 2 )
+anims/puxar = SubResource( 5 )
 anims/soltar = SubResource( 6 )
-anims/walking = SubResource( 5 )
+anims/walking = SubResource( 7 )
 next/jumping = "walking"
 next/puxar = "walking"
 playback/active = true
 playback/speed = 1.4
-blend_times = [ "puxar", "puxar", 50.0 ]
+blend_times = [ "jumping", "falling", 1.0, "puxar", "puxar", 50.0 ]
 autoplay = "walking"
 
 [node name="collider" type="CollisionShape2D" parent="."]
@@ -208,11 +219,11 @@ _update_shape_index = 0
 texture = ExtResource( 2 )
 vframes = 2
 hframes = 10
-frame = 9
+frame = 17
 
 [node name="mao_direita" type="Sprite" parent="."]
 
-transform/pos = Vector2( 8.44336, 6.21286 )
+transform/pos = Vector2( 8, 8 )
 transform/rot = 5.25168
 texture = ExtResource( 3 )
 offset = Vector2( 18, 5 )
@@ -221,11 +232,20 @@ frame = 2
 
 [node name="mao_esquerda" type="Sprite" parent="."]
 
-transform/pos = Vector2( -25.8674, -3.9044 )
+transform/pos = Vector2( -24, -3 )
 transform/rot = -0.176855
 texture = ExtResource( 4 )
 offset = Vector2( 15, 12 )
 hframes = 10
 frame = 9
+
+[node name="floor" type="RayCast2D" parent="."]
+
+transform/pos = Vector2( 0, 107 )
+transform/scale = Vector2( 1.625, 1 )
+enabled = true
+cast_to = Vector2( 0, 1 )
+layer_mask = 8
+type_mask = 15
 
 

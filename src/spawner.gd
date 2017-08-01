@@ -3,7 +3,7 @@ extends Node2D
 export(PackedScene) var spawn
 onready var spawnref = load (spawn.get_path())
 
-export(float) var min_intervalo = 0
+export(float) var min_intervalo = 3
 export(float) var max_intervalo = 10
 
 onready var timer = get_child(0)

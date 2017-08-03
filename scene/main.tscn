@@ -106,7 +106,7 @@ transform/scale = Vector2( 0.248195, 4.62857 )
 texture = ExtResource( 1 )
 offset = Vector2( 130, 0 )
 region = true
-region_rect = Rect2( 52.1644, 0, 524, 120 )
+region_rect = Rect2( 449.886, 0, 524, 120 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ground"]
 
@@ -122,7 +122,7 @@ transform/pos = Vector2( -0.15802, -231.573 )
 transform/scale = Vector2( 0.297011, 3.69728 )
 texture = ExtResource( 2 )
 region = true
-region_rect = Rect2( 52.1644, 0, 524, 120 )
+region_rect = Rect2( 449.886, 0, 524, 120 )
 
 [node name="terraGRAMADO" type="Sprite" parent="ground"]
 

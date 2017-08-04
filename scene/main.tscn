@@ -155,6 +155,5 @@ gravity_scale = 9.8
 
 transform/pos = Vector2( 1234.37, 310.905 )
 spawn = ExtResource( 6 )
-min_intervalo = 3
 
 

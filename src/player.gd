@@ -11,20 +11,21 @@ func _input(ev):
 	if (ev.type == InputEvent.MOUSE_BUTTON):
 		if (ev.pressed):
 			start_pos = ev.pos
-			get_node("anim").play("puxar")
+			get_node("anim2").play("puxar")
 		# Verifica a distância clique/toque em relação pressionamento
 		# Caso menor que 75 entendemos que foi um movimento errado
 		elif(start_pos.distance_to (ev.pos) < 75):
 			jump ()
+			get_node("anim2").play("puxar")
 		else:
 			var delta_pos = ev.pos - start_pos
 			shoot (delta_pos)
-			get_node("anim").play("soltar")
+			get_node("anim2").play("soltar")
 
 func jump (height = 400):
 	if (!is_jumping()):
 		set_linear_velocity(Vector2(0,-height))
-		get_node("anim").play("jumping") 
+		get_node("anim1").play("jumping") 
 
 func shoot (impulse):
 	var bi = bullet.instance()
